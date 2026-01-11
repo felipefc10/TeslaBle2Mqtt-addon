@@ -134,6 +134,10 @@ fi
 
 
 bashio::log.info "Starting TeslaBle2Mqtt addon v$reportedVersion"
+if [ -f /version.txt ]; then
+    commit_hash=$(cat /version.txt)
+    bashio::log.info "Built from Git commit: $commit_hash"
+fi
 
 
 # Set the color output for the logs
