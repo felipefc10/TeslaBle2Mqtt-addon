@@ -25,7 +25,8 @@ RUN git clone https://github.com/Lenart12/TeslaBleHttpProxy.git /build/TeslaBleH
 RUN git clone https://github.com/felipefc10/TeslaBle2Mqtt.git /build/TeslaBle2Mqtt \
     && cd /build/TeslaBle2Mqtt \
     && git checkout feat/retain-state-on-sleep-11572999411983802363 \
-    && go build -o /usr/local/bin/TeslaBle2Mqtt
+    && go build -o /usr/local/bin/TeslaBle2Mqtt \
+    && git rev-parse HEAD > /version.txt
 
     
 # Copy data for add-on
